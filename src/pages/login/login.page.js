@@ -3,10 +3,7 @@ import React from 'react';
 import { withFormik } from 'formik';
 import * as yup from 'yup';
 
-// import { withRouter } from 'react-router';
-
 import {connect} from 'react-redux'
-// import { compose } from "redux";
 
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
@@ -100,17 +97,6 @@ const handleSubmit = (values, { props, setSubmitting }) => {
     })
 }
 
-/*const LoginPage = compose(
-    withRouter,
-    withFormik({
-        mapPropsToValues: () => ({
-            username: '',
-            password: ''
-        }),
-        validationSchema,
-        handleSubmit
-    })
-)(LoginForm)*/
 const LoginForm = withFormik({
     mapPropsToValues,
     validationSchema,
